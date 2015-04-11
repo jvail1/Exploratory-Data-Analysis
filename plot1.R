@@ -2,7 +2,8 @@
 require(sqldf)
 
 # Read data in from https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
-#Make table from subset of data Dates 2/2/2007 and 2/2/2007
+#Unzip household_power_consumption.txt to local working directory
+#Make table from subset of data 2/2/2007 and 2/2/2007
 hpc <- read.csv.sql("household_power_consumption.txt", 'select * from file where Date = "1/2/2007" or Date = "2/2/2007" ', sep = ";")
 
 #Close all connections
